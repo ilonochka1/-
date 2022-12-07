@@ -1,0 +1,68 @@
+24.10(2.6)
+#include <iostream>
+using namespace std;
+int main(){
+  long c0;
+int conter;
+  while (true){
+    cin >> c0;
+    while(c0!=1){
+      if (c0%2==0){
+        c0=c0/2;
+      }else if (c0%2!=0){
+        c0=3*c0+1;
+      }
+      cout<< c0 << endl;
+      conter++;
+    }
+    cout << "Steps =";
+    cout << conter << endl;
+    conter=0;
+  }
+    }
+    \
+    2.7
+    #include <iostream>
+    using namespace std;
+    int main (void){
+    double pi4=0;
+    long n;
+    long j=1;
+    cout << "Number of interations?";
+    cin >>n;
+    for(int i=o; i<n; i=i+2){
+    pi4 = pi4 + ((1./j)-(1./(j+2)));
+    j=j+4;
+    }
+    cout.precision(20);
+    cout << "Pi = "<<(pi4 * 4.) << endl;
+    retern 0;
+    }
+    2.10
+    #include <iostream>
+    using namespace std;
+    int main(void){
+    int size;
+    cin >> size;
+    if (size > 0&& size <100){
+    cout <<'+';
+    for (int i =0;i < size; i++)
+    cout << '-';
+    cout << '+'<< endl;
+    for(int i =0; i< size; i++){
+    cout <<'|';
+    for (int j = 0; j <size; j++)
+    cout << '|' << endl;
+    }
+    cout << '+';
+    for(int i =0; i<size; i++)
+    cout << '-';
+    cout << '+' <<endl;
+    }
+    else
+    {
+    cout <<"Sorry, the side size is too big";
+    }
+    return 0;
+    }
+    
