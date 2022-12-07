@@ -1,0 +1,239 @@
+1.
+#include <iostream>
+#include <ctime> 
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	int m[4][3];
+	int evenNum = 0;
+	int min = 1;
+	int max = 10;
+	srand(time(NULL));
+	
+	    for (int i = 0; i < 4; ++i) { 
+		    for (int j = 0; j < 3; ++j) {
+			    m[i][j] = min + rand() % (max - min + 1);
+		}
+	}
+	for (int i = 0; i < 4; ++i) {
+		evenNum = 0;
+		for (int j = 0; j < 3; ++j) {
+			if (m[i][j] % 2 == 0)
+				evenNum++;
+		}
+		cout << "for " << i << " evenNum = " << evenNum << endl;
+	}
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 3; ++j) {
+			cout << m[i][j] << ' ';
+		}
+		cout << endl;
+	}
+}
+2.#include <iostream>
+#include <ctime> 
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	int m[5][7];
+	int sumOfElements = 0;
+	int min = 1;
+	int max = 10;
+	srand(time(NULL));
+	for (int i = 0; i < 5; ++i) {
+		for (int j = 0; j < 7; ++j) {
+			m[i][j] = min + rand() % (max - min + 1);
+		}
+	}
+	for (int i = 0; i < 5; ++i) {
+		sumOfElements = 0;
+		for (int j = 0; j < 7; ++j) {
+			sumOfElements = m[i][j] + sumOfElements;
+		}
+		cout << "for " << i << " sumOfElements = " << sumOfElements << endl;
+	}
+	for (int i = 0; i < 5; ++i) {
+		for (int j = 0; j < 7; ++j) {
+			cout << m[i][j] << ' ';
+		}
+		cout << endl;
+	}
+}
+3.
+#include <iostream>
+#include <ctime> 
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	int m[6][4];
+	int evenNum = 0;
+	int min = 1;
+	int max = 10;
+	srand(time(NULL));
+	for (int i = 0; i < 6; ++i) { 
+		for (int j = 0; j < 4; ++j) {
+			m[i][j] = min + rand() % (max - min + 1);
+		}
+	}
+	for (int j = 0; j < 4; ++j) {
+		evenNum = 0;
+		for (int i = 0; i < 6; ++i) {
+			if (m[i][j] % 2 == 0)
+				evenNum++;
+		}
+		cout << "for " << j << " evenNum = " << evenNum << endl;
+	}
+	for (int i = 0; i < 6; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			cout << m[i][j] << ' ';
+		}
+		cout << endl;
+	}
+}
+4.
+#include <iostream>
+#include <ctime> 
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	int m[4][6];
+	int sumOfElements = 0;
+	int min = 1;
+	int max = 10;
+	srand(time(NULL));
+	
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 6; ++j) {
+			m[i][j] = min + rand() % (max - min + 1);
+		}
+	}
+	for (int j = 0; j < 6; ++j) {
+		sumOfElements = 0;
+		for (int i = 0; i < 4; ++i) {
+			sumOfElements = m[i][j] + sumOfElements;
+		}
+		cout << "for " << j << " sumOfElements = " << sumOfElements << endl;
+	}
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 6; ++j) {
+			cout << m[i][j] << ' ';
+		}
+		cout << endl;
+	}
+}
+5.
+#include <iostream>
+#include <ctime> 
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	int m[3][4];
+	int line;//i
+	int column;//j
+	int elementMax = 0;
+	int min = 1;
+	int max = 10;
+	srand(time(NULL));
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			m[i][j] = min + rand() % (max - min + 1);
+		}
+	}
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			if (m[i][j] > elementMax) {
+				elementMax = m[i][j];
+				line = i;
+				column = j;
+			}
+		}
+	}
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			cout << m[i][j] << ' ';
+		}
+		cout << endl;
+	}
+	cout << elementMax << "[" << line << ";" << column << "]" << endl;
+}
+6.#include <iostream>
+#include <ctime> 
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	int m[3][4];
+	int line;//i
+	int column;//j
+	int elementMin = 11;
+	int min = 1;
+	int max = 10;
+	srand(time(NULL));
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			m[i][j] = min + rand() % (max - min + 1);
+		}
+	}
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			if (m[i][j] < elementMin) {
+				elementMin = m[i][j];
+				line = i;
+				column = j;
+			}
+		}
+	}
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			cout << m[i][j] << ' ';
+		}
+		cout << endl;
+	}
+	cout << elementMin << "[" << line << ";" << column << "]" << endl;
+}
+
+15.
+#include <iostream>
+#include <ctime> 
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	int m[3][3];
+	int sumDiagonal1 = 0;
+	int sumDiagonal2 = 0;
+	int min = 1;
+	int max = 10;
+	srand(time(NULL));
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 3; ++j) {
+			m[i][j] = min + rand() % (max - min + 1);
+		}
+	}
+	for (int i = 0; i < 3; ++i) {
+		sumDiagonal1 = m[i][i] + sumDiagonal1;
+	}
+	for (int i = 0,j=2; i < 3; ++i,--j) {
+			sumDiagonal2 = m[i][j] + sumDiagonal2;
+	}
+	
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 3; ++j) {
+			cout << m[i][j] << ' ';
+		}
+		cout << endl;
+	}
+	cout << sumDiagonal1 << " - first diagonal " << endl << sumDiagonal2 << " - second diagonal";
+}
